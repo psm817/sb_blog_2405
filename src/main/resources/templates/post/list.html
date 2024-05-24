@@ -3,16 +3,16 @@
     <tr>
         <th>번호</th>
         <th>제목</th>
-        <th>작성일자</th>
+        <th>작성일</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="post : ${postList}">
         <td>
-            <a th:href="@{|post/detail/${post.id}|}" th:text="${post.id}"></a>
+            <a th:text="${post.id}" th:href="@{|/post/detail/${post.id}|}"></a>
         </td>
         <td>
-            <a th:href="@{|post/detail/${post.id}|}" th:text="${post.title}"></a>
+            <a th:text="${post.title}" th:href="@{|/post/detail/${post.id}|}"></a>
         </td>
         <td th:text="${post.createDate}"></td>
     </tr>
