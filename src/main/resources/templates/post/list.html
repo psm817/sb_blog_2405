@@ -1,14 +1,20 @@
-<table>
+<table border="1">
     <thead>
     <tr>
+        <th>번호</th>
         <th>제목</th>
-        <th>내용</th>
+        <th>작성일자</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="post : ${postList}">
-        <td th:text="${post.title}"></td>
-        <td th:text="${post.content}"></td>
+        <td>
+            <a th:href="@{|post/detail/${post.id}|}" th:text="${post.id}"></a>
+        </td>
+        <td>
+            <a th:href="@{|post/detail/${post.id}|}" th:text="${post.title}"></a>
+        </td>
+        <td th:text="${post.createDate}"></td>
     </tr>
     </tbody>
 </table>

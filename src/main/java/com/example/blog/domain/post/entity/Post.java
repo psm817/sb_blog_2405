@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @SuperBuilder
@@ -18,8 +20,10 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @ToString
 public class Post extends BaseEntity {
+    private Long id;
     private String title;
     private String content;
+    private LocalDateTime createDate;
 
     @ManyToOne
     private Member author;
