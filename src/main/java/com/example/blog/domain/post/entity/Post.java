@@ -20,10 +20,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @ToString
 public class Post extends BaseEntity {
-    private Long id;
     private String title;
     private String content;
-    private LocalDateTime createDate;
 
     @ManyToOne
     private Member author;

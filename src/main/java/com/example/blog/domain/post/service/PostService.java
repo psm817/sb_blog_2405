@@ -23,7 +23,6 @@ public class PostService {
         Post post = Post.builder()
                 .title(title)
                 .content(content)
-                .createDate(LocalDateTime.now())
                 .build();
         postRepository.save(post);
     }
